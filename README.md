@@ -1,5 +1,3 @@
-**Readme**
-
 **Overview**
 
 This repository contains a simple TCP client-server chat application implemented in Node.js. The application allows multiple clients to connect to a server and exchange messages with each other. The server acts as a mediator between clients, relaying messages appropriately.
@@ -25,25 +23,29 @@ Concurrency is handled through asynchronous event-driven programming in Node.js.
 
 1. **Clone the Repository:**
    ```
-   git clone backend-developer-submission-tanmya-vishvakarma
+   git clone https://github.com/tanmyavishvakarma/Backend-Developer-Submission-Tanmya-Vishvakarma.git
    ```
 
 2. **Navigate to the Project Directory:**
    ```
-   cd backend-developer-submission-tanmya-vishvakarma
+   cd Backend-Developer-Submission-Tanmya-Vishvakarma
    ```
 
 3. **Start the Server:**
    ```
    cd server
+   npm i
    node server.js <host> <port>
    ```
    *Replace `<host>` and `<port>` with the desired host and port for the server. If not provided, defaults to `127.0.0.1` and `4001` respectively.*
 
+Navigate back to directory root.
+
 4. **Start the Client:**
    ```
    cd client
-   node client.js <host> <port>
+   npm i
+   node index.js <host> <port>
    ```
    *Replace `<host>` and `<port>` with the desired host and port for the server. If not provided, defaults to `127.0.0.1` and `4001` respectively.*
 
