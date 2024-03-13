@@ -23,7 +23,7 @@ function readText(msg, fromServer) {
   // Prompting user for input
   readline.question("", (text) => {
     // If input is not 'exit', continue reading input recursively
-    if (text != "exit") {
+    if (text !== "exit") {
       readText(text, false);
       // If message is from the server, send it to the server
       if (fromServer) {
@@ -33,8 +33,11 @@ function readText(msg, fromServer) {
         passClientMessage(connectionId, text, undefined);
       }
     } else {
-      // If input is 'exit', close readline interface
-      return readline.close();
+      // If input is 'exit', close readline interface, end the connection and exit the process
+      readline.close();
+      client.end(); // Close the connection
+      console.log("Connection closed");
+      process.exit(0); // Exit the process
     }
   });
 }
@@ -44,7 +47,7 @@ client.on("data", (data) => {
   // Parsing received data as JSON
   const jsonData = JSON.parse(data);
   // If message type is 'server', display the message and initiate reading user input
-  if (jsonData.type == "server") {
+  if (jsonData.type === "server") {
     connectionId = jsonData.toClient;
     readText(jsonData.message, true);
   } else {
