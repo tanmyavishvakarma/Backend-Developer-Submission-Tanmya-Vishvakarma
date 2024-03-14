@@ -38,7 +38,7 @@ Concurrency is handled through asynchronous event-driven programming in Node.js.
    ```
    *Replace `<host>` and `<port>` with the desired host and port for the server. If not provided, defaults to `127.0.0.1` and `4001` respectively.*
 
-Navigate back to directory root.
+Open another terminal and navigate to the Project Directory
 
 4. **Start the Client:**
    ```
