@@ -47,10 +47,10 @@ Navigate back to directory root.
    npm i
    node index.js <host> <port>
    ```
-   *Replace `<host>` and `<port>` with the desired host and port for the server. If not provided, defaults to `127.0.0.1` and `4001` respectively.*
+   *Replace `<host>` and `<port>` with the host and port of the server awaiting connections. If not provided, defaults to `127.0.0.1` and `4001` respectively.*
 
 5. **Interact with the Client:**
-   - Once the client is connected to the server, you can start typing messages in the command line interface.
+   - Once the client is connected to the server, type in your username and start chatting using the command line interface.
    - Type `exit` to disconnect from the server and close the client application.
 
 **Assumptions and Design Choices**
