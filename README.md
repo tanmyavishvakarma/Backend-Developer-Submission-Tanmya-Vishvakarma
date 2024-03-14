@@ -34,7 +34,6 @@ Concurrency is handled through asynchronous event-driven programming in Node.js.
 3. **Start the Server:**
    ```
    cd server
-   npm i
    node server.js <host> <port>
    ```
    *Replace `<host>` and `<port>` with the desired host and port for the server. If not provided, defaults to `127.0.0.1` and `4001` respectively.*
@@ -44,7 +43,6 @@ Navigate back to directory root.
 4. **Start the Client:**
    ```
    cd client
-   npm i
    node index.js <host> <port>
    ```
    *Replace `<host>` and `<port>` with the host and port of the server awaiting connections. If not provided, defaults to `127.0.0.1` and `4001` respectively.*
